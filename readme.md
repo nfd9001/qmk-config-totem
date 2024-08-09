@@ -6,8 +6,9 @@
 
 # QMK CONFIG FOR THE TOTEM SPLIT KEYBOARD
 
-> **Note**
-> The qmk firmware for the TOTEM should work, but I haven't tested it yet. So if problems occur please contact me.
+nfd's config for the totem (see the `decker` layout, forked from `tedge` in the direct upstream).
+It may be rough, and the diagrams may not match the actual source config, but it might be a better starting point for you than the initial repo!
+Features a working QWERTY layout and a key configuration loosely inspired by the Atreus mapping (which I happen to be quite used to).
 
 [Here](https://github.com/GEIGEIGEIST/totem) you can find the hardware files and build guide.\
 [Here](https://github.com/GEIGEIGEIST/zmk-config-totem) you can find the ZMK config for the TOTEM.
