@@ -133,8 +133,6 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
      ╌┄┈┈───═╡  SNIP   │  TG     │    ↑    │    =    │    {    ││    }    │    7    │    8    │    9    │    +    │   
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │  HOME   │    ←    │    ↓    │    →    │    [    ││    ]    │    4    │    5    │    6    │    -    │    
-   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │SNIP COPY│   END   │   PG↑   │         │   PG↓   │    (    ││    )    │    1    │    2    │    3    │    *    │    =    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │    0    │  
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
@@ -165,8 +163,8 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
    [_RAISE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,   KC_CIRC,  KC_AMPR,  KC_PAST, KC_LPRN,  KC_RPRN,
-              XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_FIND,  XXXXXXX,   XXXXXXX,  KC_LEFT,  KC_DOWN, KC_UP,    KC_RGHT, 
-    KC_GRV,  KC_UNDO,  KC_CUT,   KC_COPY,  KC_PASTE, XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX, 
+              XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_FIND,  XXXXXXX,   KC_LEFT,  KC_DOWN, KC_UP,    KC_RGHT, XXXXXXX,	
+    KC_GRV,   KC_UNDO,  KC_CUT,   KC_COPY,  KC_PASTE, XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,  KC_BSLS,  XXXXXXX, 
                                   ADJUST,   _______,  _______,   _______,  _______,  _______
  ),
  /*
