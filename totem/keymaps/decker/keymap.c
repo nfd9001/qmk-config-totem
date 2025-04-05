@@ -140,7 +140,7 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
    [_LOWER] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_SNP,   TOGGLEGAME,   KC_UP,    KC_EQL,   KC_LCBR,   KC_RCBR,  KC_7,    KC_8,    KC_9,    KC_PPLS,
-              KC_QUOT,  KC_LEFT,   KC_DOWN,  KC_RGHT,  KC_LBRC,   KC_RBRC,  KC_4,    KC_5,    KC_6,    KC_MINS,  
+              KC_HOME,  KC_LEFT,   KC_DOWN,  KC_RGHT,  KC_LBRC,   KC_RBRC,  KC_4,    KC_5,    KC_6,    KC_MINS,  
    KC_ESC,   KC_END,   KC_PGUP,   XXXXXXX,  KC_PGDN,  KC_LPRN,   KC_RPRN,  KC_1,    KC_2,    KC_3,    KC_PAST,  KC_EQL,
                                   _______,  _______,  _______,   _______,  _______,   KC_0
  ),
