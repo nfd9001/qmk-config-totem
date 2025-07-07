@@ -77,6 +77,16 @@ enum custom_keycodes {
 // HOTKEYS
 #define KC_SNP LGUI(LSFT(KC_4))        // Capture portion of screen
 #define KC_SNPCP LGUI(LSFT(LCTL(KC_4)))  // Copy portion of screen
+//toggle ignoremode in tridactyl
+#define KC_IGN LSFT(KC_INS)
+#define KC_WINSNP LGUI(LSFT(KC_S))
+#define KC_UNDO LCTL(KC_Z)
+#define KC_REDO LCTL(KC_Y)
+#define KC_CUT LCTL(KC_X)
+#define KC_COPY LCTL(KC_C)
+#define KC_PASTE LCTL(KC_V)
+#define KC_ALL LCTL(KC_A)
+
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   t a p d a n c e                   │
 // └─────────────────────────────────────────────────┘
@@ -133,13 +143,15 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
      ╌┄┈┈───═╡  SNIP   │  TG     │    ↑    │    =    │    {    ││    }    │    7    │    8    │    9    │    +    │   
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │  HOME   │    ←    │    ↓    │    →    │    [    ││    ]    │    4    │    5    │    6    │    -    │    
+   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
+   │  ESC    │  END    │ PGUP    │         │  PGDN   │    (    ││    )    │    1    │    2    │    3    │    *    │    =    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │    0    │  
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
 
    [_LOWER] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_SNP,   TOGGLEGAME,   KC_UP,    KC_EQL,   KC_LCBR,   KC_RCBR,  KC_7,    KC_8,    KC_9,    KC_PPLS,
+              KC_WINSNP,TOGGLEGAME,   KC_UP,    KC_EQL,   KC_LCBR,   KC_RCBR,  KC_7,    KC_8,    KC_9,    KC_PPLS,
               KC_HOME,  KC_LEFT,   KC_DOWN,  KC_RGHT,  KC_LBRC,   KC_RBRC,  KC_4,    KC_5,    KC_6,    KC_MINS,  
    KC_ESC,   KC_END,   KC_PGUP,   XXXXXXX,  KC_PGDN,  KC_LPRN,   KC_RPRN,  KC_1,    KC_2,    KC_3,    KC_PAST,  KC_EQL,
                                   _______,  _______,  _______,   _______,  _______,   KC_0
@@ -153,7 +165,7 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
      ╌┄┈┈───═╡    !    │    @    │    #    │    $    │    %    ││    ^    │    &    │    *    │    (    │    )    │   
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-             │         │         │         │  FIND   │         ││         │    ←    │    ↓    │    ↑    │    →    │
+             │   ALL   │         │         │  FIND   │         ││         │    ←    │    ↓    │    ↑    │    →    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │    ~    │   UNDO  │   CUT   │   COPY  │  PASTE  │         ││         │         │         │         │         │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -163,7 +175,7 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
    [_RAISE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,   KC_CIRC,  KC_AMPR,  KC_PAST, KC_LPRN,  KC_RPRN,
-              XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_FIND,  XXXXXXX,   KC_LEFT,  KC_DOWN, KC_UP,    KC_RGHT, XXXXXXX,	
+              KC_ALL,   XXXXXXX,  XXXXXXX,  KC_FIND,  XXXXXXX,   XXXXXXX,  KC_LEFT,  KC_DOWN, KC_UP,    KC_RGHT,
     KC_GRV,   KC_UNDO,  KC_CUT,   KC_COPY,  KC_PASTE, XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,  KC_BSLS,  XXXXXXX, 
                                   ADJUST,   _______,  _______,   _______,  _______,  _______
  ),
@@ -176,7 +188,7 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
      ╌┄┈┈───═╡   F2    │   F3    │   F4    │   F5    │   F6    ││   F7    │   F8    │   F9    │   F10   │   F11   │   
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-             │ DEBUG   │  RESET  │         │         │ TT-DOWN ││  TT-UP  │   META  │   CTRL  │   ALT   │   SFT   │   
+             │ DEBUG   │  RESET  │         │ IGNORE  │ TT-DOWN ││  TT-UP  │   META  │   CTRL  │   ALT   │   SFT   │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │   F1    │ OS SWAP │         │         │         │ TT-PRINT││         │         │         │         │         │   F12   │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -186,7 +198,7 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
    [_ADJUST] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,     KC_F7  ,  KC_F8,    KC_F9,    KC_F10,   KC_F11,   
-              DB_TOGG,  QK_BOOT,  XXXXXXX,  XXXXXXX,  DT_DOWN,   DT_UP,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+              DB_TOGG,  QK_BOOT,  XXXXXXX,  KC_IGN,   DT_DOWN,   DT_UP,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     KC_F1,    OS_SWAP,  XXXXXXX,  XXXXXXX,  XXXXXXX,  DT_PRNT,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F12,
                                   _______,  _______,  _______,   _______,  _______,  _______  
  ),
@@ -194,12 +206,12 @@ KC_TAB,       KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,      KC_N,     KC_M,
    ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
 
    ┌─────────────────────────────────────────────────┐
-   │                                 │      ╭╮╭╮╭╮╭╮
+   │ g a m e                                         │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
      ╌┄┈┈───═╡         │         │         │         │         ││         │         │         │         │         │   
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-             │         │         │         │         │         ││         │         │         │         │         │    
+             │         │ s       │ d       │ f       │ g       ││ h       │ j       │ k       │ l       │         │    
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │         │         │         │         │         │         ││         │         │         │         │         │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
